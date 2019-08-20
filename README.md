@@ -79,6 +79,9 @@ Open a new tab of the terminal, cd into `gene-variants` and run `npm run dev`.
 
 Now, go to [http:localhost:8000/](http:localhost:8000/) on your web browser and search for gene variants!
 
+## Pushing code to Git
+I used [gitignore.io](gitignore.io) to make a .gitignore file for the Django project and added `node_modules` to it to ignore pushing the Javascript dependencies.
+
 
 ## What I would have done differently (or what I would have added) if I had more time:
 - Spend some more time on design,
