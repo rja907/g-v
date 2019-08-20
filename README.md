@@ -1,13 +1,13 @@
 # Gene Variants
 
-The project was made using Django and React. (My first complete project using Django and I used React after about a year. So much has changed. The new React DevTools are were really helpful)
+The project was made using Django and React. (My first complete project using Django and I used React after about a year. So much has changed!! The new React DevTools are were really helpful.)
 
 ## Bonus: Deploy project
 I used a DigitalOcean droplet to deploy this project!
 You can check out the app [here](http://142.93.222.251:8000/). 
 
 (To see the responses from the backend endpoint, I recommend downloading [JSONView](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc?hl=en) Chrome extension)
-The backend endpoint for returning a list of genes can be seen [here](http://142.93.222.251:8000/api/find_all_genes) and the backend endpoint for returning the variants of ACE gene can be seen [here](http://142.93.222.251:8000/api/find_all_variants/q=ACE).
+The backend endpoint for returning a list of genes can be seen [here](http://142.93.222.251:8000/api/find_all_genes) and the backend endpoint for returning the variants of ACE gene can be seen [here](http://142.93.222.251:8000/api/find_all_variants/?q=ACE).
 
 
 ## Backend
@@ -41,7 +41,19 @@ It was used to define the urlpatterns by importing the views from `src/api`.
 ## Testing
 For testing, I used `unittest` and `django.test` to make sure that both the endpoints are giving success status for responses and that the response content (actual value) was equal to the expected value which was calculated using the tsv.
 
-To run the tests, simply go to `gene-variants/src` and run `python manage.py test api.tests`.
+To run the tests, simply go to `gene-variants/src` and run `python manage.py test api.tests` which yields:
+```
+(gene-variants)  raj@Raj > ~/Desktop/gene-variants/src > master $ python manage.py test api.tests
+Creating test database for alias 'default'...
+Ran once!
+System check identified no issues (0 silenced).
+..
+----------------------------------------------------------------------
+Ran 2 tests in 0.020s
+
+OK
+Destroying test database for alias 'default'...
+```
 
 ## Installing and running this project:
 
@@ -70,6 +82,7 @@ Now, go to [http:localhost:8000/](http:localhost:8000/) on your web browser and 
 
 ## What I would have done differently (or what I would have added) if I had more time:
 - Spend some more time on design,
+- and accordingly style the app in a better way,
 - add extensive logging so that the traffic can be monitored,
 - add authentication so that only authenticated users can access the app,
 - add more rigorous testing using different frameworks for the frontend and backend,
@@ -77,4 +90,5 @@ Now, go to [http:localhost:8000/](http:localhost:8000/) on your web browser and 
 - add environment variables for different environments,
 - create a Makefile to start the app using one command,
 - made specific components to show error messages,
+- use the new React lifecycle methods,
 - use create-react-app for the frontend etc.
