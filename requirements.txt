@@ -13,3 +13,4 @@ pylint==1.9.4
 singledispatch==3.4.0.3
 six==1.12.0
 wrapt==1.11.2
+Django==2.1.5

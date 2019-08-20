@@ -2,6 +2,13 @@
 
 The project was made using Django and React. (My first complete project using Django and I used React after about a year. So much has changed. The new React DevTools are were really helpful)
 
+## Bonus: Deploy project
+I used a DigitalOcean droplet to deploy this project!
+You can check out the app [here](http://142.93.222.251:8000/). 
+
+(To see the responses from the backend endpoint, I recommend downloading [JSONView](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc?hl=en) Chrome extension)
+The backend endpoint for returning a list of genes can be seen [here](http://142.93.222.251:8000/api/find_all_genes) and the backend endpoint for returning the variants of ACE gene can be seen [here](http://142.93.222.251:8000/api/find_all_variants/q=ACE).
+
 
 ## Backend
 First, I made all the backend endpoints using Django in `src/api`.
@@ -37,7 +44,6 @@ For testing, I used `unittest` and `django.test` to make sure that both the endp
 To run the tests, simply go to `gene-variants/src` and run `python manage.py test api.tests`.
 
 ## Installing and running this project:
-I decided that to limit the amount of time it takes to start the project, I should just give the user everything (i.e. not gitignoring node_modules etc.) so that the user can focus on what is necessary. 
 
 The only thing that the user has to ensure is that they have the following installed:
 - python
@@ -48,6 +54,8 @@ The only thing that the user has to ensure is that they have the following insta
 When the repo has been downloaded and everything above has been installed, run the following commands in the terminal in the same order:
 
 `cd gene-variants/`
+
+`pip install -r requirements.txt`
 
 `source bin/activate`
 
